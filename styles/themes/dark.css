@@ -1,0 +1,21 @@
+[data-theme="dark"] {
+  --background: 222 14% 2%;
+  --foreground: 40 20% 94%;
+  --card: 222 14% 6%;
+  --card-foreground: 40 20% 94%;
+  --popover: 222 14% 4%;
+  --popover-foreground: 40 20% 94%;
+  --primary: 84 100% 67%;
+  --primary-foreground: 222 14% 2%;
+  --secondary: 222 14% 8%;
+  --secondary-foreground: 40 20% 94%;
+  --muted: 222 14% 42%;
+  --muted-foreground: 222 14% 42%;
+  --accent: 222 14% 8%;
+  --accent-foreground: 40 20% 94%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 40 20% 94%;
+  --border: 222 14% 12%;
+  --input: 222 14% 12%;
+  --ring: 84 100% 67%;
+}
