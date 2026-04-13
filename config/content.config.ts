@@ -82,7 +82,7 @@ export const contentConfig = {
     title: "Let's build something great",
     links: [
       { label: "rajharsha666@gmail.com", href: "mailto:rajharsha666@gmail.com", primary: true },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/", primary: false },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/harshavardhanrajuk/", primary: false },
       { label: "GitHub", href: "https://github.com/HarshaVardhanRajuK", primary: false },
       { label: "+91 82475 18629", href: "tel:+918247518629", primary: false },
     ],
