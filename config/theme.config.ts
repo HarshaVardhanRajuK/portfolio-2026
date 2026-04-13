@@ -12,7 +12,7 @@ export const themeConfig = {
 
   // Animation settings
   animations: {
-    enableCustomCursor: true,
+    enableCustomCursor: false,
     enableScrollReveal: true,
     enableMarquee: true,
   },

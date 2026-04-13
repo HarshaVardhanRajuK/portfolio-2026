@@ -36,11 +36,11 @@ export function Projects() {
         {projectsConfig.label}
       </p>
       <h2 className="reveal mb-16 text-4xl font-extrabold leading-tight tracking-tight md:text-6xl">
-        Things I've <em className="font-serif italic font-normal text-primary">built</em>
+        Things I&apos;ve <em className="font-serif italic font-normal text-primary">built</em>
       </h2>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {projectsConfig.items.map((project, i) => (
+        {projectsConfig.items.map((project) => (
           <div
             key={project.id}
             className={`reveal group relative overflow-hidden border border-border bg-card p-10 transition-all hover:-translate-y-1 hover:border-primary/35 ${

@@ -1,52 +1,12 @@
 "use client";
 
 import { contentConfig } from "@/config/content.config";
-import { useEffect, useRef } from "react";
 
 export function Hero() {
   const { hero } = contentConfig;
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const ringRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const cursor = cursorRef.current;
-    const ring = ringRef.current;
-    if (!cursor || !ring) return;
-
-    let mx = 0,
-      my = 0,
-      rx = 0,
-      ry = 0;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mx = e.clientX;
-      my = e.clientY;
-      cursor.style.left = mx - 5 + "px";
-      cursor.style.top = my - 5 + "px";
-    };
-
-    const lerp = () => {
-      rx += (mx - rx) * 0.1;
-      ry += (my - ry) * 0.1;
-      ring.style.left = rx - 18 + "px";
-      ring.style.top = ry - 18 + "px";
-      requestAnimationFrame(lerp);
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-    lerp();
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
 
   return (
     <>
-      {/* Custom Cursor */}
-      <div ref={cursorRef} className="cursor" />
-      <div ref={ringRef} className="cursor-ring" />
-
       <section
         id="hero"
         className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 md:px-12"
@@ -62,14 +22,13 @@ export function Hero() {
             {hero.eyebrow}
           </p>
 
-          <h1 className="mb-8 text-6xl font-extrabold leading-[0.9] tracking-tight opacity-0 animate-fadeUp [animation-delay:0.35s] [animation-fill-mode:forwards] md:text-8xl lg:text-9xl">
-            {hero.name.first}
-            <br />
-            <span className="font-serif italic font-normal text-primary">
-              {hero.name.middle}
+          <h1 className="mb-8 opacity-0 animate-fadeUp [animation-delay:0.35s] [animation-fill-mode:forwards]">
+            <span className="block text-6xl font-extrabold leading-[0.9] tracking-tight md:text-8xl lg:text-9xl">
+              {hero.name.first}
             </span>
-            <br />
-            {hero.name.last}
+            <span className="block text-4xl font-extrabold leading-[0.9] tracking-tight text-muted-foreground md:text-6xl lg:text-7xl">
+              <span className="font-mono">{hero.name.middle}</span> {hero.name.last}
+            </span>
           </h1>
 
           <div className="flex items-center gap-4 opacity-0 animate-fadeUp [animation-delay:0.55s] [animation-fill-mode:forwards]">

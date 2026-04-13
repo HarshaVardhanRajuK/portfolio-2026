@@ -1,19 +1,19 @@
 export const contentConfig = {
   hero: {
-    eyebrow: "Full Stack Engineer · Bhubaneswar, India",
+    eyebrow: "Full Stack Engineer · India",
     name: {
       first: "Harsha",
-      middle: "Vardhan",
-      last: "Raju",
+      middle: "/",
+      last: "Dev Environment",
     },
-    tagline: "Building scalable systems & hotel tech at Bookingjini",
+    tagline: "Building scalable systems & real-world products",
     stats: [
       { value: "50+", label: "Properties Served" },
       { value: "3", label: "Live Systems" },
       { value: "1.5y", label: "Production Exp." },
     ],
     terminal: {
-      title: "harsha@dev ~ stack.sh",
+      title: "harsha@dev ~ environment.sh",
       commands: [
         { prompt: "whoami", output: "harsha_vardhan_raju" },
         {
@@ -82,8 +82,8 @@ export const contentConfig = {
     title: "Let's build something great",
     links: [
       { label: "rajharsha666@gmail.com", href: "mailto:rajharsha666@gmail.com", primary: true },
-      { label: "LinkedIn", href: "https://linkedin.com", primary: false },
-      { label: "GitHub", href: "https://github.com", primary: false },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/", primary: false },
+      { label: "GitHub", href: "https://github.com/HarshaVardhanRajuK", primary: false },
       { label: "+91 82475 18629", href: "tel:+918247518629", primary: false },
     ],
   },
@@ -93,7 +93,7 @@ export const contentConfig = {
     links: [
       { label: "Top ↑", href: "#hero" },
       { label: "Email", href: "mailto:rajharsha666@gmail.com" },
-      { label: "GitHub", href: "https://github.com" },
+      { label: "GitHub", href: "https://github.com/HarshaVardhanRajuK" },
     ],
   },
 
