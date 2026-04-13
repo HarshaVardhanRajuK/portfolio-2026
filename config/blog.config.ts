@@ -3,6 +3,18 @@ export const blogConfig = {
   title: "Words I've written",
   posts: [
     {
+      id: "from-code-to-product-part-1",
+      tag: "Career · Product Thinking",
+      title: "When Your Code Meets Business Reality: My Journey from Developer to Product Thinker",
+      excerpt:
+        "I used to think my job was to write good code. Then someone asked me: 'How should we price this?' and I realized I had no idea what I was building.",
+      icon: "🧠",
+      status: "published",
+      readTime: "5 min read",
+      slug: "/blog/from-code-to-product-part-1",
+      date: "2025-01-15",
+    },
+    {
       id: "redis-distributed-lock",
       tag: "Backend · Architecture",
       title: "Building a Redis Distributed Lock for High-Concurrency Booking Systems",
@@ -19,16 +31,6 @@ export const blogConfig = {
       excerpt:
         "A deep dive into my job queue architecture for real-time ARI sync across Booking.com, Expedia, Go-MMT, and Agoda.",
       icon: "🔄",
-      status: "coming-soon",
-      readTime: "— min read",
-    },
-    {
-      id: "career-transition",
-      tag: "Career · Self-taught",
-      title: "From Civil Engineering to Full Stack Engineer: My Unconventional Path",
-      excerpt:
-        "How I pivoted from a civil engineering degree to building production systems used by 50+ hotel properties.",
-      icon: "🛠️",
       status: "coming-soon",
       readTime: "— min read",
     },

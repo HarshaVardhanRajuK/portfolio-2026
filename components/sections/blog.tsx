@@ -39,39 +39,48 @@ export function Blog() {
       </h2>
 
       <div className="grid gap-6 md:grid-cols-3">
-        {blogConfig.posts.map((post, i) => (
-          <div
-            key={post.id}
-            className="reveal group cursor-pointer overflow-hidden border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/30"
-            style={{ transitionDelay: `${i * 0.1}s` }}
-          >
-            <div className="relative flex h-40 items-center justify-center bg-secondary">
-              <span className="text-5xl opacity-30">{post.icon}</span>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card" />
-            </div>
+        {blogConfig.posts.map((post, i) => {
+          const isPublished = post.status === "published";
+          const CardWrapper = isPublished ? "a" : "div";
+          const cardProps = isPublished
+            ? { href: post.slug }
+            : {};
 
-            <div className="p-6">
-              <p className="mb-3 font-mono text-xs uppercase tracking-[0.12em] text-primary">
-                {post.tag}
-              </p>
-              <h4 className="mb-2 text-base font-semibold leading-snug">
-                {post.title}
-              </h4>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {post.excerpt}
-              </p>
-            </div>
+          return (
+            <CardWrapper
+              key={post.id}
+              {...cardProps}
+              className="reveal group cursor-pointer overflow-hidden border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/30"
+              style={{ transitionDelay: `${i * 0.1}s` }}
+            >
+              <div className="relative flex h-40 items-center justify-center bg-secondary">
+                <span className="text-5xl opacity-30">{post.icon}</span>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card" />
+              </div>
 
-            <div className="flex items-center justify-between px-6 pb-6">
-              <span className="font-mono text-xs text-muted-foreground">
-                Coming soon
-              </span>
-              <span className="font-mono text-xs text-primary">
-                {post.readTime}
-              </span>
-            </div>
-          </div>
-        ))}
+              <div className="p-6">
+                <p className="mb-3 font-mono text-xs uppercase tracking-[0.12em] text-primary">
+                  {post.tag}
+                </p>
+                <h4 className="mb-2 text-base font-semibold leading-snug">
+                  {post.title}
+                </h4>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {post.excerpt}
+                </p>
+              </div>
+
+              <div className="flex items-center justify-between px-6 pb-6">
+                <span className="font-mono text-xs text-muted-foreground">
+                  {isPublished ? post.date : "Coming soon"}
+                </span>
+                <span className="font-mono text-xs text-primary">
+                  {post.readTime}
+                </span>
+              </div>
+            </CardWrapper>
+          );
+        })}
 
         <div className="reveal col-span-full border border-dashed border-border p-8 text-center font-mono text-xs tracking-wide text-muted-foreground">
           {blogConfig.comingSoonMessage}

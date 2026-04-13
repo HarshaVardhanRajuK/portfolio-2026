@@ -10,7 +10,7 @@ export function Nav() {
         href="#hero"
         className="font-mono text-sm tracking-wide text-primary"
       >
-        HVR/
+        harsha/
       </Link>
 
       <ul className="hidden gap-10 md:flex">
