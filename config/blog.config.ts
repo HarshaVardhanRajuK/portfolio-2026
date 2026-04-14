@@ -3,16 +3,16 @@ export const blogConfig = {
   title: "Words I've written",
   posts: [
     {
-      id: "from-code-to-product-part-1",
+      id: "code-first-to-outcome-first",
       tag: "Career · Product Thinking",
-      title: "When Your Code Meets Business Reality: My Journey from Developer to Product Thinker",
+      title: "From Code-First to Outcome-First: How Owning a Product Changed the Way I Think",
       excerpt:
-        "I used to think my job was to write good code. Then someone asked me: 'How should we price this?' and I realized I had no idea what I was building.",
+        "I didn't stop being an engineer. I just stopped letting the code be the point.",
       icon: "🧠",
       status: "published",
-      readTime: "5 min read",
-      slug: "/blog/from-code-to-product-part-1",
-      date: "2025-01-15",
+      readTime: "4 min read",
+      slug: "/blog/code-first-to-outcome-first",
+      date: "2025-04-10",
     },
     {
       id: "redis-distributed-lock",

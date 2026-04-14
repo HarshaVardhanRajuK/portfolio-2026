@@ -99,21 +99,10 @@ export default async function BlogPost({
         </header>
 
         {/* Content */}
-        <div
-          className="prose prose-invert prose-lg max-w-none
-            prose-headings:font-bold prose-headings:tracking-tight
-            prose-h2:mb-4 prose-h2:mt-12 prose-h2:text-3xl
-            prose-h3:mb-3 prose-h3:mt-8 prose-h3:text-xl
-            prose-p:leading-relaxed prose-p:text-foreground/90
-            prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-            prose-strong:font-semibold prose-strong:text-foreground
-            prose-code:rounded prose-code:bg-secondary prose-code:px-1.5 prose-code:py-0.5
-            prose-code:font-mono prose-code:text-sm prose-code:text-primary
-            prose-pre:bg-secondary prose-pre:border prose-pre:border-border
-            prose-blockquote:border-l-primary prose-blockquote:italic
-            prose-ul:my-6 prose-li:my-2
-            prose-hr:my-12 prose-hr:border-border"
-        >
+        <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none
+          prose-p:text-foreground prose-headings:text-foreground
+          prose-strong:text-foreground prose-li:text-foreground
+          prose-blockquote:text-foreground/90">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {content}
           </ReactMarkdown>
