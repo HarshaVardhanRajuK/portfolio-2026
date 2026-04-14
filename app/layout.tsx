@@ -50,14 +50,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
-        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="dark"
           enableSystem={false}
           themes={["dark", "light", "midnight", "mono"]}
-          suppressHydrationWarning
         >
           {children}
           <ThemeSwitcher />
